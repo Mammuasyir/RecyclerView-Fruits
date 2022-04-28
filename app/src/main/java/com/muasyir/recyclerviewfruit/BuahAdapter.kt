@@ -1,11 +1,13 @@
 package com.muasyir.recyclerviewfruit
 
+import android.content.Context
 import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 
@@ -33,6 +35,7 @@ class BuahAdapter(
         holder.tvBuah.text = namaBuah[position]
         holder.imgBuah.setImageResource(gambarBuah[position])
         holder.itemView.setOnClickListener {
+            Toast.makeText(holder.itemView.context, "buah ${namaBuah[position]}", Toast.LENGTH_SHORT).show()
             val mediaPlayer = MediaPlayer.create(holder.itemView.context, suaraBuah[position])
             mediaPlayer.start()
         }

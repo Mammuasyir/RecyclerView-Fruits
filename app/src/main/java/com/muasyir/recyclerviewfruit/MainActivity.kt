@@ -3,6 +3,7 @@ package com.muasyir.recyclerviewfruit
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             R.raw.durian,
             R.raw.jambu_air,
             R.raw.manggis,
-            R.raw.strawberry
+            R.raw.rodhi
         )
         val buahAdapter = BuahAdapter(namaBuah, gambarBuah, suaraBuah)
         rv_buah.apply {
